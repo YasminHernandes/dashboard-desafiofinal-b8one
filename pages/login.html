@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <link rel="stylesheet" href="./../assets/css/reset.css" />
+    <link rel="stylesheet" href="./../assets/css/login/login.css" />
+  </head>
+  <body>
+    <main class="container-block">
+      <div class="container-block__header">
+        <h1 class="container-block__title">Olá, tudo bem? 👋</h1>
+        <span class="container-block__text">
+          Vamos decolar para grandes dias de vendas.
+        </span>
+      </div>
+      <form action="" class="container-block__form">
+        <label for="email" class="container-block__label"> Seu E-mail </label>
+        <input
+          class="container-block__input"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="exemplo@email.com"
+          required
+          autofocus
+        />
+
+        <label for="password" class="container-block__label"> Sua Senha </label>
+        <input
+          class="container-block__input"
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Digite sua senha"
+          required
+        />
+
+        <div class="container-block__form-info">
+          <label for="checkbox" class="container-block__label-checkbox">
+            Manter conectado
+            <input
+              type="checkbox"
+              class="container-block__input-checkbox container-block__input-checkbox--checked"
+              name="checkbox"
+              checked
+            />
+            <span class="container-block__checkmark"></span>
+          </label>
+          <a href="" class="container-block__link"> Esqueci minha senha </a>
+        </div>
+        <button type="submit" class="container-block__button">Entrar</button>
+      </form>
+    </main>
+  </body>
+</html>

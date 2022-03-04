@@ -1,0 +1,27 @@
+@media screen and (max-width: 928px) {
+  .swiper {
+    margin: 0;
+  }
+
+  .overview__swiper {
+    width: 100%;
+  }
+
+  .overview__swiper .swiper-slide {
+    max-width: max-content;
+  }
+
+  .general-report__swiper {
+    width: max-content;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main__block--right {
+    max-width: 100%;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}

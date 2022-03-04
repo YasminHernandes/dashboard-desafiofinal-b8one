@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --neutral-low-dark: #000000;
+  --neutral-low-default: #333333;
+  --neutral-low-medium: #555555;
+  --neutral-low-light: #999999;
+  --neutral-high-default: #ffffff;
+  --neutral-high-light: #eeeeee;
+  --neutral-high-medium: #d5d5d5;
+  --primary-dark: #142159;
+  --primary-default: #425dc7;
+  --primary-medium: #2e44a1;
+  --primary-light: #cdd2eb;
+  --primary-lightest: #f1f2f9;
+}
