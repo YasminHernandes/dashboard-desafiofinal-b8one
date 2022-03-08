@@ -116,12 +116,12 @@ body {
   display: none;
   position: absolute;
   top: 2px;
-  left: 5px;
+  left: 6px;
   width: 4px;
   height: 9px;
-  border: solid white;
+  border: solid var(--neutral-high-default);
   border-width: 0 3px 3px 0;
-  border-radius: 1px;
+  border-radius: 2px;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);

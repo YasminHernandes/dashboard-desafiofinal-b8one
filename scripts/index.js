@@ -1,31 +1,16 @@
-const overviewSwiperDiv = document.querySelector(".overview__swiper");
-const overviewSwiperWrapper = document.querySelector(".overview__list");
-const overviewSwiperSlide = document.querySelectorAll(".overview__item");
-const reportSwiperDiv = document.querySelector(".general-report__swiper");
-const reportSwiperWrapper = document.querySelector(".general-report__data");
-const reportSwiperSlide = document.querySelectorAll(
-  ".general-report__data-item"
-);
+// menu mobile
+const menuHamburguer = document.querySelector(".header__menu-hamburguer");
+const sidebar = document.querySelector(".sidebar");
+let showFullMenu = true;
 
-const viewportWidth = window.innerWidth;
+const menuHamburguerActive = () => {
+  document.body.style.overflow = showFullMenu ? "hidden" : "initial";
+  menuHamburguer.classList.toggle("on", showFullMenu);
+  showFullMenu
+    ? (sidebar.style.display = "initial")
+    : (sidebar.style.display = "none");
+  showFullMenu = !showFullMenu;
+};
 
-// if (viewportWidth <= 928) {
-overviewSwiperDiv.classList.add("swiper");
-overviewSwiperWrapper.classList.add("swiper-wrapper");
-overviewSwiperSlide.forEach((element) => element.classList.add("swiper-slide"));
 
-reportSwiperDiv.classList.add("swiper");
-reportSwiperWrapper.classList.add("swiper-wrapper");
-reportSwiperSlide.forEach((element) => element.classList.add("swiper-slide"));
-
-// }
-
-const swiper = new Swiper(".swiper", {
-  direction: "horizontal",
-  loop: false,
-  setWrapperSize: true,
-
-  928: {
-    enable: false,
-  },
-});
+menuHamburguer.addEventListener("click", menuHamburguerActive);

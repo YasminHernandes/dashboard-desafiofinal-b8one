@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+  <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hubly Retailer</title>
 
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/-bundle.min.css"/>
 
-    <link rel="stylesheet" href="./../assets/css/index/media.css" />
     <link rel="stylesheet" href="./../assets/css/reset.css" />
     <link rel="stylesheet" href="./../assets/css/index/index.css" />
+    <link rel="stylesheet" href="./../assets/css/index/media.css" />
   </head>
   <body>
     <header class="header">
       <div class="header__block--left">
-        <svg
-          class="header__logo-icon"
+        <div class="header__menu-hamburguer">
+          <div class="menu-hamburguer__line menu-hamburguer__line--one"></div>
+          <div class="menu-hamburguer__line menu-hamburguer__line--two"></div>
+          <div class="menu-hamburguer__line menu-hamburguer__line--three"></div>
+        </div>
+        <svg class="header__logo-icon"
           width="32"
           height="32"
           viewBox="0 0 32 32"
           fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+          xmlns="http://www.w3.org/2000/svg">
           <circle cx="16" cy="16" r="16" fill="#F1F2F9" />
           <path
             d="M6.44356 10.8182H8.70066L11.7234 18.196H11.8427L14.8654 10.8182H17.1225V21H15.3526V14.005H15.2582L12.4443 20.9702H11.1218L8.3079 13.9901H8.21344V21H6.44356V10.8182ZM19.0611 21V10.8182H25.6832V12.3643H20.9055V15.1286H25.3402V16.6747H20.9055V19.4538H25.723V21H19.0611Z"
@@ -35,17 +35,11 @@
         <h2 class="header__title">Minha Empresa</h2>
       </div>
       <div class="header__block--right">
-        <div class="header__help">
+        <div class="header-item header-item__help">
           <button class="header__button header__button--help">
-            <svg
-              class="header__icon"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+            <svg class="header__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
             >
-              <path
+              <path 
                 d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
                 fill="#CDD2EB"
                 stroke="#CDD2EB"
@@ -69,17 +63,21 @@
               />
             </svg>
           </button>
+          <div class="header__dropdown header__dropdown-help">
+            <div class="dropdown__link">Central de Ajuda</div>
+            <div class="dropdown__link">Tutoriais</div>
+            <div class="dropdown__link dropdown__link--blue">Falar com Especialista</div>
+          </div>
         </div>
-        <div class="header__notification">
+
+        <div class="header-item header-item__notification">
           <button class="header__button header__button--notification">
-            <svg
-              class="header__icon"
+            <svg class="header__icon"
               width="18"
               height="20"
               viewBox="0 0 18 20"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M14.5 6.40096C14.5 4.96853 13.9205 3.59478 12.8891 2.5819C11.8576 1.56903 10.4587 1 9 1C7.54131 1 6.14236 1.56903 5.11091 2.5819C4.07946 3.59478 3.5 4.96853 3.5 6.40096C3.5 12.7021 0.75 14.5024 0.75 14.5024H17.25C17.25 14.5024 14.5 12.7021 14.5 6.40096Z"
                 fill="#CDD2EB"
@@ -96,68 +94,83 @@
                 stroke-linejoin="round"
               />
             </svg>
-            <span class="header__notification-ammount"></span>
+            <span class="header__notification-amount"></span>
+          </button>
+          <div class="header__dropdown header__dropdown-notification">
+            <div class="dropdown__container">
+              <div class="dropdown__header">
+              <div class="dropdown__info">
+                <h3 class="dropdown__title">
+                  👋 Bem-vindo(a) a Hubly Retailer
+                </h3>
+                <span class="dropdown__time">
+                  10 min
+                  <span class="dropdown__noview"></span>
+                </span>
+              </div>
+              <span class="dropdown__text">
+                Para uma completa experiência com a 
+                Retailer, precisamos que você siga 
+                os passos abaixo.
+              </span>
+            </div>
 
-            <div class="header-dropdown__notification header-dropdown"></div>
-          </button>
-        </div>
-        <div class="header__profile">
-          <button class="header__button header__button--profile">
-            <img src="./../assets/images/avatar-user.png" alt="User Image" />
-            <span class="header__profile-name">Gustavo Silva</span>
-            <!-- <div class="header-dropdown__profile header-dropdown">
-              <span class="header-dropdown__profile-arrow"></span>
-              <h3 class="header-dropdown__profile-title">
-                Olá, <span>Henrique</span> 👋
-              </h3>
-              <button class="header-dropdown__link">Minha Conta</button>
-              <button class="header-dropdown__link--exit">
-                Sair
-                <div class="header-dropdown__exit">
-                  <h3 class="header-dropdown__exit-title">
-                    Tem que certeza que deseja sair da Retailer?
-                  </h3>
-                  <svg
-                    class="header-dropdown__exit_icon"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M13.5 2.5L2.5 13.5"
-                      stroke="#425DC7"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M2.5 2.5L13.5 13.5"
-                      stroke="#425DC7"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  <div class="header-dropdown__exit-actions">
-                    <button class="header-dropdown__button">Não, Continuar</button>
-                    <button class="header-dropdown__button">Sim, sair</button>
-                  </div>
+              <div class="dropdown__topics">
+                <div class="dropdown__item">
+                  <label class="dropdown__label" for="topic-sign-up">
+                    <input class="dropdown__input" type="checkbox" name="topic-sign-up" id="topic-sign-up" checked>
+                    Cadastrar Organização
+                    <span class="dropdown__check"></span>
+                  </label>
                 </div>
-              </button>
-            </div> -->
-          </button>
+
+                <div class="dropdown__item">
+                  <label class="dropdown__label" for="topic-invite">
+                    <input class="dropdown__input" type="checkbox" name="topic-invite" id="topic-invite">
+                    Convidar Revendedores
+                    <span class="dropdown__check"></span>
+                  </label>
+                  <a href="#" class="dropdown__link dropdown__link--blue">Vamos lá!</a>
+                </div>
+              </div>
+
+              <div class="dropdown__notify-text">
+                <div class="dropdown__info">
+                  <span class="notify-text__icon">📈</span>
+                  <h3 class="notify-text__title">
+                     O seu Relatório Mensal está pronto!
+                  </h3>
+                  <div class="notify-text__time">12 min</div>
+                </div>
+                <a href="#" class="notify-text__link">Ir para Relatórios</a>
+              </div>
+              <a href="" class="dropdown__button">Marcar como Lidas</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-item header-item__profile">
+            <img src="./../assets/images/avatar-user.png" alt="User Image" />
+            <span class="header-item__profile-name">Gustavo Silva</span>
+            <div class="header__dropdown header__dropdown-profile">
+              <h3 class="dropdown__title">
+                Olá, <span class="dropdown__title--blue">Henrique</span> 👋
+              </h3>
+              <a href="#" class="dropdown__link">Minha Conta</a>
+              <a href="#" class="dropdown__link dropdown__link--exit">
+                Sair
+              </a>
+            </div>
         </div>
       </div>
     </header>
 
     <main class="main">
-      <aside class="sidebar">
+      <aside class="sidebar sidebar--mobile">
         <nav class="nav">
           <ul class="nav__list">
-            <li class="nav__item nav__item--active">
-              <div class="nav__item-content">
+            <details class="nav__item nav__item--active">
+              <summary class="nav__item-content">
                 <svg
                   class="nav__icon"
                   width="24"
@@ -200,10 +213,10 @@
                   />
                 </svg>
                 Resumo de dados
-              </div>
-            </li>
-            <li class="nav__item nav__item--dropdown">
-              <div class="nav__item-content">
+              </summary>
+            </details>
+            <details class="nav__item nav__item--dropdown">
+              <summary class="nav__item-content">
                 <svg
                   class="nav__icon"
                   width="24"
@@ -233,7 +246,7 @@
                 </svg>
                 Pra vender
                 <svg
-                  class="nav__icon--arrow"
+                  class="nav__icon--arrow nav__icon--arrow-rotate"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -248,33 +261,26 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-              </div>
-
+              </summary>
               <div class="nav__dropdown">
                 <ul class="nav__dropdown-list">
-                  <li class="nav__dropdown-item nav__dropdown-item--active">
-                    <a href="" class="nav__dropdown--link"> Gerador de link </a>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown--link"> Gerador de link </a>
                   </li>
                   <li class="nav__dropdown-item">
-                    <a href="" class="nav__dropdown--link"> Gerador de link </a>
+                    <a href="#" class="nav__dropdown--link"> Vitrini digital </a>
                   </li>
                   <li class="nav__dropdown-item">
-                    <a href="" class="nav__dropdown--link"> Gerador de link </a>
+                    <a href="#" class="nav__dropdown--link"> Carrinhos compartilháveis </a>
                   </li>
                   <li class="nav__dropdown-item">
-                    <a href="" class="nav__dropdown--link"> Gerador de link </a>
-                  </li>
-                  <li class="nav__dropdown-item">
-                    <a href="" class="nav__dropdown--link"> Gerador de link </a>
-                  </li>
-                  <li class="nav__dropdown-item">
-                    <a href="" class="nav__dropdown--link"> Gerador de link </a>
+                    <a href="#" class="nav__dropdown--link"> Carrinhos abandonados </a>
                   </li>
                 </ul>
               </div>
-            </li>
-            <li class="nav__item">
-              <div class="nav__item-content">
+            </details>
+            <details class="nav__item">
+              <summary class="nav__item-content">
                 <svg
                   class="nav__icon"
                   width="24"
@@ -307,10 +313,10 @@
                   />
                 </svg>
                 Pedidos
-              </div>
-            </li>
-            <li class="nav__item nav__item--dropdown">
-              <div class="nav__item-content">
+              </summary>
+            </details>
+            <details class="nav__item nav__item--dropdown">
+              <summary class="nav__item-content">
                 <svg
                   class="nav__icon"
                   width="24"
@@ -351,7 +357,7 @@
                 </svg>
                 Financeiro
                 <svg
-                  class="nav__icon--arrow"
+                  class="nav__icon--arrow nav__icon--arrow-rotate"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -366,10 +372,23 @@
                     stroke-linejoin="round"
                   />
                 </svg>
+              </summary>
+              <div class="nav__dropdown">
+                <ul class="nav__dropdown-list">
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown--link"> Pagamentos </a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown--link"> Comissões </a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown--link"> Bônus de Performance </a>
+                  </li>
+                </ul>
               </div>
-            </li>
-            <li class="nav__item nav__item--dropdown">
-              <div class="nav__item-content">
+            </details>
+            <details class="nav__item nav__item--dropdown">
+              <summary class="nav__item-content">
                 <svg
                   class="nav__icon"
                   width="24"
@@ -409,7 +428,7 @@
                 </svg>
                 Configurações
                 <svg
-                  class="nav__icon--arrow"
+                  class="nav__icon--arrow nav__icon--arrow-rotate"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -424,10 +443,26 @@
                     stroke-linejoin="round"
                   />
                 </svg>
+              </summary>
+              <div class="nav__dropdown">
+                <ul class="nav__dropdown-list">
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown--link"> Membros</a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown--link"> Gerais  </a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown--link"> Customizações </a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown--link"> White Label </a>
+                  </li>
+                </ul>
               </div>
-            </li>
-            <li class="nav__item nav__item--dropdown">
-              <div class="nav__item-content">
+            </details>
+            <details class="nav__item nav__item--dropdown">
+              <summary class="nav__item-content">
                 <svg
                   class="nav__icon"
                   width="24"
@@ -469,7 +504,7 @@
                 </svg>
                 Ferramentas
                 <svg
-                  class="nav__icon--arrow"
+                  class="nav__icon--arrow "
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -484,8 +519,30 @@
                     stroke-linejoin="round"
                   />
                 </svg>
+              </summary>
+              <div class="nav__dropdown">
+                <ul class="nav__dropdown-list">
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown--link"> Hubly Store </a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown--link"> Retailer Form </a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown--link"> Retailer Cluster </a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown--link"> Retailer Invoice </a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown--link"> Gerador de link </a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown--link"> Gerador de link </a>
+                  </li>
+                </ul>
               </div>
-            </li>
+            </details>
           </ul>
         </nav>
 
@@ -504,40 +561,40 @@
 
       <div class="main__block--right">
         <div class="main__banner">
-          <svg
-            class="banner__icon"
-            width="32"
-            height="32"
-            viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2C8.26801 2 2 8.26801 2 16C2 23.732 8.26801 30 16 30Z"
-              fill="#F1F2F9"
-              stroke="#F1F2F9"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M16 21.6V16"
-              stroke="#425DC7"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M16 10.3996H16.012"
-              stroke="#425DC7"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <h2 class="banner__title">
-            🔥 Lançamento 🔥 Nova Ferramenta de Carrinhos Abandonados 😍
-          </h2>
+            <svg
+              class="banner__icon"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2C8.26801 2 2 8.26801 2 16C2 23.732 8.26801 30 16 30Z"
+                fill="#F1F2F9"
+                stroke="#F1F2F9"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M16 21.6V16"
+                stroke="#425DC7"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M16 10.3996H16.012"
+                stroke="#425DC7"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <h2 class="banner__title">
+              🔥Lançamento🔥 Nova Ferramenta de Carrinhos Abandonados 😍
+            </h2>
           <button class="banner__button">Conheça a nova ferramenta</button>
         </div>
 
@@ -834,27 +891,27 @@
           <!-- temp  -->
         </div>
 
-        <!-- <div class="insights__block">
+        <div class="insights__block">
           <h2 class="insights__title">
-            <img
-              class="insights__icon"
-              src="./../assets/images/eyes-icon.png"
-              alt="Eyes icon"
-            />
-            Insights
+            <img class="insights__icon" src="./../assets/images/eyes-icon.png" alt="Eyes icon" />
+              Insights
           </h2>
           <table class="insights-table">
             <h3 class="insights-table__title">Produtos mais vendidos</h3>
             <thead class="insights-table__thead">
               <tr class="insights-table__trow">
-                <th
-                  class="insights-table__thead-column insights-table__thead-column--products"
-                >
+                <th class="insights-table__thead-column insights-table__thead-column--products">
                   Produto
                 </th>
-                <th class="insights-table__thead-column">Número do Pedido</th>
-                <th class="insights-table__thead-column">Departamento</th>
-                <th class="insights-table__thead-column">Valor</th>
+                <th class="insights-table__thead-column insights-table__thead-column--num-products">
+                  Número do Pedido
+                </th>
+                <th class="insights-table__thead-column insights-table__thead-column--department">
+                  Departamento
+                </th>
+                <th class="insights-table__thead-column insights-table__thead-column--value">
+                  Valor
+                </th>
               </tr>
             </thead>
             <tbody class="insights-table__tbody">
@@ -863,52 +920,48 @@
                   <div class="tbody-item__content">
                     <span class="tbody-item__element">1</span>
                     <span class="tbody-item__title">
-                      <img
-                        class="tbody-item__image"
-                        src="./../assets/images/computer-image.png"
-                        alt="Computer Image"
-                      />
-                      Computador Gamer Completo Fácil Intel i5 (Terceira
-                      Geração) 8GB Placa de Vídeo GT 730 2GB...</span
-                    >
+                        <img class="tbody-item__image" src="./../assets/images/computer-image.png" alt="Computer Image" />
+                        Computador Gamer Completo Fácil Intel i5 (Terceira
+                        Geração) 8GB Placa de Vídeo GT 730 2GB...
+                    </span>
                   </div>
                 </td>
                 <td class="insights-table__tbody-item">
-                  <span class="tbody-item__value"> #912304817412-3 </span>
+                  <div class="tbody-item__container">
+                    <span class="tbody-item__element--mobile">1</span>
+                    <span class="tbody-item__value tbody-item__value--id"> #912304817412-3 </span>
+                  </div>
                 </td>
                 <td class="insights-table__tbody-item">
                   <span class="tbody-item__value"> Eletrônicos </span>
                 </td>
                 <td class="insights-table__tbody-item">
-                  <span class="tbody-item__value"> R$ 2.999,00 </span>
+                  <span class="tbody-item__value tbody-item__value--price"> R$ 2.999,00 </span>
                 </td>
               </tr>
-              <tr
-                class="insights-table__tbody-trow insights-table__tbody-trow--fill"
-              >
+              <tr class="insights-table__tbody-trow insights-table__tbody-trow--fill">
                 <td class="insights-table__tbody-item">
                   <div class="tbody-item__content">
                     <span class="tbody-item__element">2</span>
                     <span class="tbody-item__title">
-                      <img
-                        class="tbody-item__image"
-                        src="./../assets/images/smartphone-image.png"
-                        alt="Smartphone Image"
-                      />
+                      <img class="tbody-item__image" src="./../assets/images/smartphone-image.png" alt="Smartphone Image" />
                       Smartphone Samsung Galaxy S21 FE 128GB 5G Wi-Fi Tela 6.4''
                       Dual Chip 6GB RAM Câmera Tripla + Selfie 32MP -
-                      Preto</span
-                    >
+                      Preto
+                    </span>
                   </div>
                 </td>
                 <td class="insights-table__tbody-item">
-                  <span class="tbody-item__value"> #912304817412-3 </span>
+                  <div class="tbody-item__container">
+                    <span class="tbody-item__element--mobile">2</span>
+                    <span class="tbody-item__value tbody-item__value--id"> #912304817412-3 </span>
+                  </div>
                 </td>
                 <td class="insights-table__tbody-item">
                   <span class="tbody-item__value"> Smartphones </span>
                 </td>
                 <td class="insights-table__tbody-item">
-                  <span class="tbody-item__value"> R$ 2.999,00 </span>
+                  <span class="tbody-item__value tbody-item__value--price"> R$ 2.999,00 </span>
                 </td>
               </tr>
               <tr class="insights-table__tbody-trow">
@@ -916,50 +969,46 @@
                   <div class="tbody-item__content">
                     <span class="tbody-item__element">3</span>
                     <span class="tbody-item__title">
-                      <img
-                        class="tbody-item__image"
-                        src="./../assets/images/pneu-image.png"
-                        alt="Pneu Image"
-                      />
-                      Pneu Aro 14 175/70R14 Pirelli P400 EVO</span
-                    >
+                      <img class="tbody-item__image" src="./../assets/images/pneu-image.png" alt="Pneu Image" />
+                      Pneu Aro 14 175/70R14 Pirelli P400 EVO
+                    </span>
                   </div>
                 </td>
                 <td class="insights-table__tbody-item">
-                  <span class="tbody-item__value"> #912304817412-3 </span>
+                  <div class="tbody-item__container">
+                    <span class="tbody-item__element--mobile">3</span>
+                    <span class="tbody-item__value tbody-item__value--id"> #912304817412-3 </span>
+                  </div>
                 </td>
                 <td class="insights-table__tbody-item">
                   <span class="tbody-item__value"> Auto </span>
                 </td>
                 <td class="insights-table__tbody-item">
-                  <span class="tbody-item__value"> R$ 2.999,00 </span>
+                  <span class="tbody-item__value tbody-item__value--price"> R$ 2.999,00 </span>
                 </td>
               </tr>
-              <tr
-                class="insights-table__tbody-trow insights-table__tbody-trow--fill"
-              >
+              <tr class="insights-table__tbody-trow insights-table__tbody-trow--fill" >
                 <td class="insights-table__tbody-item">
                   <div class="tbody-item__content">
                     <span class="tbody-item__element">4</span>
                     <span class="tbody-item__title">
-                      <img
-                        class="tbody-item__image"
-                        src="./../assets/images/pan-image.png"
-                        alt="Panela Image"
-                      />
+                      <img class="tbody-item__image" src="./../assets/images/pan-image.png" alt="Panela Image" />
                       Panela De Pressão Elétrica 6l Electrolux Chef Pcc20 -
-                      127v</span
-                    >
+                      127v
+                    </span>
                   </div>
                 </td>
                 <td class="insights-table__tbody-item">
-                  <span class="tbody-item__value"> #912304817412-3 </span>
+                  <div class="tbody-item__container">
+                    <span class="tbody-item__element--mobile">4</span>
+                    <span class="tbody-item__value tbody-item__value--id"> #912304817412-3 </span>
+                  </div>
                 </td>
                 <td class="insights-table__tbody-item">
                   <span class="tbody-item__value"> Eletroportáteis </span>
                 </td>
                 <td class="insights-table__tbody-item">
-                  <span class="tbody-item__value"> R$ 2.999,00 </span>
+                  <span class="tbody-item__value tbody-item__value--price"> R$ 2.999,00 </span>
                 </td>
               </tr>
               <tr class="insights-table__tbody-trow">
@@ -967,52 +1016,48 @@
                   <div class="tbody-item__content">
                     <span class="tbody-item__element">5</span>
                     <span class="tbody-item__title">
-                      <img
-                        class="tbody-item__image"
-                        src="./../assets/images/coffe-image.png"
-                        alt="Coffe maker Image"
-                      />
+                      <img class="tbody-item__image" src="./../assets/images/coffe-image.png" alt="Coffe maker Image"/>
                       Cafeteira Expresso Nescafé Dolce Gusto Genio S Plus
-                      Vermelha - Dgs3</span
-                    >
+                      Vermelha - Dgs3
+                    </span>
                   </div>
                 </td>
                 <td class="insights-table__tbody-item">
-                  <span class="tbody-item__value"> #912304817412-3 </span>
+                  <div class="tbody-item__container">
+                    <span class="tbody-item__element--mobile">5</span>
+                    <span class="tbody-item__value tbody-item__value--id"> #912304817412-3 </span>
+                  </div>
                 </td>
                 <td class="insights-table__tbody-item">
                   <span class="tbody-item__value"> Eletroportáteis </span>
                 </td>
                 <td class="insights-table__tbody-item">
-                  <span class="tbody-item__value"> R$ 2.999,00 </span>
+                  <span class="tbody-item__value tbody-item__value--price"> R$ 2.999,00 </span>
                 </td>
               </tr>
-              <tr
-                class="insights-table__tbody-trow insights-table__tbody-trow--fill"
-              >
+              <tr class="insights-table__tbody-trow insights-table__tbody-trow--fill" >
                 <td class="insights-table__tbody-item">
                   <div class="tbody-item__content">
                     <span class="tbody-item__element">6</span>
                     <span class="tbody-item__title">
-                      <img
-                        class="tbody-item__image"
-                        src="./../assets/images/vacuum-cleaner-image.png"
-                        alt="Vacuum cleaner Image"
-                      />
+                      <img class="tbody-item__image" src="./../assets/images/vacuum-cleaner-image.png" alt="Vacuum cleaner Image" />
                       Aspirador de Pó e Água WAP GTW 20 Profissional 1600W 20
                       Litros 160 mbar com Acessórios e Soprador Barril Amarelo -
-                      220V</span
-                    >
+                      220V
+                    </span>
                   </div>
                 </td>
                 <td class="insights-table__tbody-item">
-                  <span class="tbody-item__value"> #912304817412-3 </span>
+                  <div class="tbody-item__container">
+                    <span class="tbody-item__element--mobile">6</span>
+                    <span class="tbody-item__value tbody-item__value--id"> #912304817412-3 </span>
+                  </div>
                 </td>
                 <td class="insights-table__tbody-item">
                   <span class="tbody-item__value"> Eletroportáteis </span>
                 </td>
                 <td class="insights-table__tbody-item">
-                  <span class="tbody-item__value"> R$ 2.999,00 </span>
+                  <span class="tbody-item__value tbody-item__value--price"> R$ 2.999,00 </span>
                 </td>
               </tr>
               <tr class="insights-table__tbody-trow">
@@ -1020,52 +1065,48 @@
                   <div class="tbody-item__content">
                     <span class="tbody-item__element">7</span>
                     <span class="tbody-item__title">
-                      <img
-                        class="tbody-item__image"
-                        src="./../assets/images/purifier-image.png"
-                        alt="Purifier Image"
-                      />
+                      <img class="tbody-item__image" src="./../assets/images/purifier-image.png" alt="Purifier Image" />
                       Filtro Purificador e refrigerador de Água Top Life HeOxi
                       (Linha Alcalina Ionizada com Super Ozônio) Prata
-                      127V</span
-                    >
+                      127V
+                    </span>
                   </div>
                 </td>
                 <td class="insights-table__tbody-item">
-                  <span class="tbody-item__value"> #912304817412-3 </span>
+                  <div class="tbody-item__container">
+                    <span class="tbody-item__element--mobile">7</span>
+                    <span class="tbody-item__value tbody-item__value--id"> #912304817412-3 </span>
+                  </div>
                 </td>
                 <td class="insights-table__tbody-item">
                   <span class="tbody-item__value"> Eletroportáteis </span>
                 </td>
                 <td class="insights-table__tbody-item">
-                  <span class="tbody-item__value"> R$ 2.999,00 </span>
+                  <span class="tbody-item__value tbody-item__value--price"> R$ 2.999,00 </span>
                 </td>
               </tr>
-              <tr
-                class="insights-table__tbody-trow insights-table__tbody-trow--fill"
-              >
+              <tr class="insights-table__tbody-trow insights-table__tbody-trow--fill">
                 <td class="insights-table__tbody-item">
                   <div class="tbody-item__content">
                     <span class="tbody-item__element">8</span>
                     <span class="tbody-item__title">
-                      <img
-                        class="tbody-item__image"
-                        src="./../assets/images/apple-watch-image.png"
-                        alt="Apple Watch Image"
-                      />
+                      <img class="tbody-item__image" src="./../assets/images/apple-watch-image.png" alt="Apple Watch Image"/>
                       Apple Watch Series 3 (GPS) 42mm Caixa Cinza Espacial de
-                      Alumínio com Pulseira Esportiva Preta</span
-                    >
+                      Alumínio com Pulseira Esportiva Preta
+                    </span>
                   </div>
                 </td>
                 <td class="insights-table__tbody-item">
-                  <span class="tbody-item__value"> #912304817412-3 </span>
+                  <div class="tbody-item__container">
+                    <span class="tbody-item__element--mobile">8</span>
+                    <span class="tbody-item__value tbody-item__value--id"> #912304817412-3 </span>
+                  </div>
                 </td>
                 <td class="insights-table__tbody-item">
                   <span class="tbody-item__value"> Smartphones </span>
                 </td>
                 <td class="insights-table__tbody-item">
-                  <span class="tbody-item__value"> R$ 2.999,00 </span>
+                  <span class="tbody-item__value tbody-item__value--price"> R$ 2.999,00 </span>
                 </td>
               </tr>
               <tr class="insights-table__tbody-trow">
@@ -1073,53 +1114,49 @@
                   <div class="tbody-item__content">
                     <span class="tbody-item__element">9</span>
                     <span class="tbody-item__title">
-                      <img
-                        class="tbody-item__image"
-                        src="./../assets/images/smart-tv-image.png"
-                        alt="Smart Tv Image"
-                      />
+                      <img class="tbody-item__image" src="./../assets/images/smart-tv-image.png" alt="Smart Tv Image" />
                       Smart TV LED 32" Philco PTV32G52S HD e Áudio Dolby
                       Conversor Digital Integrado 2 HDMI 1 USB Wi-Fi com
-                      Netflix</span
-                    >
+                      Netflix
+                    </span>
                   </div>
                 </td>
                 <td class="insights-table__tbody-item">
-                  <span class="tbody-item__value"> #912304817412-3 </span>
+                  <div class="tbody-item__container">
+                    <span class="tbody-item__element--mobile">9</span>
+                    <span class="tbody-item__value tbody-item__value--id"> #912304817412-3 </span>
+                  </div>
                 </td>
                 <td class="insights-table__tbody-item">
                   <span class="tbody-item__value"> Eletrônicos </span>
                 </td>
                 <td class="insights-table__tbody-item">
-                  <span class="tbody-item__value"> R$ 2.999,00 </span>
+                  <span class="tbody-item__value tbody-item__value--price"> R$ 2.999,00 </span>
                 </td>
               </tr>
-              <tr
-                class="insights-table__tbody-trow insights-table__tbody-trow--fill"
-              >
+              <tr class="insights-table__tbody-trow insights-table__tbody-trow--fill">
                 <td class="insights-table__tbody-item">
                   <div class="tbody-item__content">
                     <span class="tbody-item__element">10</span>
                     <span class="tbody-item__title">
-                      <img
-                        class="tbody-item__image"
-                        src="./../assets/images/hair-dryer-image.png"
-                        alt="Hair Dryer Image"
-                      />
-                      Secador de Cabelos Mondial Max Travel SC-10 Bivolt</span
-                    >
+                      <img class="tbody-item__image" src="./../assets/images/hair-dryer-image.png" alt="Hair Dryer Image"/>
+                      Secador de Cabelos Mondial Max Travel SC-10 Bivolt
+                    </span>
                   </div>
                 </td>
                 <td class="insights-table__tbody-item">
-                  <span class="tbody-item__value"> #912304817412-3 </span>
+                  <div class="tbody-item__container">
+                    <span class="tbody-item__element--mobile">10</span>
+                    <span class="tbody-item__value tbody-item__value--id"> #912304817412-3 </span>
+                  </div>
                 </td>
                 <td class="insights-table__tbody-item">
                   <span class="tbody-item__value"> Beleza </span>
                 </td>
                 <td class="insights-table__tbody-item">
-                  <span class="tbody-item__value"> R$ 2.999,00 </span>
+                  <span class="tbody-item__value tbody-item__value--price"> R$ 2.999,00 </span>
                 </td>
-              </tr>
+              </tr> 
             </tbody>
           </table>
 
@@ -1198,11 +1235,13 @@
               </ul>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
     </main>
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="./../scripts/index.js"></script>
+    <script src="./../scripts/swiperActive.js"></script>
+    <script src="./../scripts/showDropdown.js"></script>
   </body>
 </html>
