@@ -395,33 +395,30 @@ a:hover {
   flex-direction: column;
   align-items: flex-start;
   gap: 0 16px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: -0.005em;
-  color: var(--neutral-low-default);
   cursor: pointer;
 }
 
 .nav__item:hover .nav__icon--arrow path {
   stroke: var(--primary-default);
 }
-
-.nav__item--active {
+.nav__item--active .nav__item-content--link {
   color: var(--primary-default);
 }
-
 .nav__item-content {
   width: 100%;
   display: flex;
   align-items: center;
   border-radius: 8px;
   padding: 12px 8px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.005em;
+  color: var(--neutral-low-default);
 }
 
 .nav__item-content:hover {
   background-color: var(--primary-lightest);
-  color: var(--primary-default);
 }
 
 .nav__icon {

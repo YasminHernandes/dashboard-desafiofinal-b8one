@@ -166,7 +166,7 @@
     </header>
 
     <main class="main">
-      <aside class="sidebar sidebar--mobile">
+      <aside class="sidebar ">
         <nav class="nav">
           <ul class="nav__list">
             <details class="nav__item nav__item--active">
@@ -212,7 +212,9 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-                Resumo de dados
+                <a href="" class="nav__item-content nav__item-content--link">
+                  Resumo de dados
+                </a>
               </summary>
             </details>
             <details class="nav__item nav__item--dropdown">
@@ -244,7 +246,7 @@
                     stroke-width="1.5"
                   />
                 </svg>
-                Pra vender
+                  Pra vender
                 <svg
                   class="nav__icon--arrow nav__icon--arrow-rotate"
                   width="24"
@@ -265,30 +267,31 @@
               <div class="nav__dropdown">
                 <ul class="nav__dropdown-list">
                   <li class="nav__dropdown-item">
-                    <a href="#" class="nav__dropdown--link"> Gerador de link </a>
+                    <a href="#" class="nav__dropdown--link">
+                      Gerador de link 
+                    </a>
                   </li>
                   <li class="nav__dropdown-item">
-                    <a href="#" class="nav__dropdown--link"> Vitrini digital </a>
+                    <a href="#" class="nav__dropdown--link"> 
+                      Vitrini digital 
+                    </a>
                   </li>
                   <li class="nav__dropdown-item">
-                    <a href="#" class="nav__dropdown--link"> Carrinhos compartilháveis </a>
+                    <a href="#" class="nav__dropdown--link"> 
+                      Carrinhos compartilháveis 
+                    </a>
                   </li>
                   <li class="nav__dropdown-item">
-                    <a href="#" class="nav__dropdown--link"> Carrinhos abandonados </a>
+                    <a href="#" class="nav__dropdown--link"> 
+                      Carrinhos abandonados 
+                    </a>
                   </li>
                 </ul>
               </div>
             </details>
             <details class="nav__item">
               <summary class="nav__item-content">
-                <svg
-                  class="nav__icon"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg class="nav__icon"width="24"height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M6.625 2.99963L3.75 6.59958V19.1994C3.75 19.6768 3.95193 20.1346 4.31138 20.4722C4.67082 20.8097 5.15833 20.9994 5.66667 20.9994H19.0833C19.5917 20.9994 20.0792 20.8097 20.4386 20.4722C20.7981 20.1346 21 19.6768 21 19.1994V6.59958L18.125 2.99963H6.625Z"
                     fill="#CDD2EB"
@@ -312,13 +315,14 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-                Pedidos
+                <a href="" class="nav__item-content nav__item-content--link">
+                  Pedidos
+                </a>
               </summary>
             </details>
             <details class="nav__item nav__item--dropdown">
               <summary class="nav__item-content">
-                <svg
-                  class="nav__icon"
+                <svg class="nav__icon"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -355,15 +359,8 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-                Financeiro
-                <svg
-                  class="nav__icon--arrow nav__icon--arrow-rotate"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                  Financeiro
+                <svg class="nav__icon--arrow nav__icon--arrow-rotate" width="24" height="24" viewBox="0  24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M7.50024 9.74963L12.0002 14.2496L16.5002 9.74963"
                     stroke="#333333"
@@ -426,7 +423,7 @@
                     </clipPath>
                   </defs>
                 </svg>
-                Configurações
+                  Configurações
                 <svg
                   class="nav__icon--arrow nav__icon--arrow-rotate"
                   width="24"
@@ -502,7 +499,7 @@
                     fill="#425DC7"
                   />
                 </svg>
-                Ferramentas
+                  Ferramentas
                 <svg
                   class="nav__icon--arrow "
                   width="24"
@@ -547,15 +544,13 @@
         </nav>
 
         <div class="sidebar__upgrade">
-          <img
-            class="sidebar__upgrade-image"
-            src="./../assets/images/rocket.png"
-            alt="Rocket image"
-          />
+          <img class="sidebar__upgrade-image" src="./../assets/images/rocket.png" alt="Rocket image"/>
           <h2 class="sidebar__upgrade-title">
             Libere novos recursos e decole seu negócio
           </h2>
-          <button class="sidebar__upgrade-button">Faça um upgrade!</button>
+          <button class="sidebar__upgrade-button">
+            Faça um upgrade!
+          </button>
         </div>
       </aside>
 
@@ -595,19 +590,29 @@
             <h2 class="banner__title">
               🔥Lançamento🔥 Nova Ferramenta de Carrinhos Abandonados 😍
             </h2>
-          <button class="banner__button">Conheça a nova ferramenta</button>
+          <button class="banner__button">
+            Conheça a nova ferramenta
+          </button>
         </div>
 
         <div class="overview__block">
-          <h1 class="overview__title">Resumo de dados</h1>
+          <h1 class="overview__title">
+            Resumo de dados
+          </h1>
           <div class="overview__swiper">
             <ul class="overview__list">
               <li class="overview__item overview__item--active">
                 Últimos 7 dias
               </li>
-              <li class="overview__item">Últimos 15 dias</li>
-              <li class="overview__item">Último mês</li>
-              <li class="overview__item">Último ano</li>
+              <li class="overview__item">
+                Últimos 15 dias
+              </li>
+              <li class="overview__item">
+                Último mês
+              </li>
+              <li class="overview__item">
+                Último ano
+              </li>
               <li class="overview__item overview__item--dropdown">
                 Personalizado
                 <svg
@@ -629,21 +634,17 @@
               </li>
             </ul>
           </div>
-          <span class="overview__text"
-            >Exibindo dados do período
-            <span class="overview__text--blue"
-              >1 de novembro à 8 de novembro de 2021</span
-            >
+          <span class="overview__text">
+            Exibindo dados do período
+            <span class="overview__text--blue">]
+              1 de novembro à 8 de novembro de 2021
+            </span>
           </span>
         </div>
 
         <div class="general-report__block">
           <h2 class="general-report__title">
-            <img
-              clas="general-report__image"
-              src="./../assets/images/chart-icon.png"
-              alt="Chart icon"
-            />
+            <img clas="general-report__image" src="./../assets/images/chart-icon.png" alt="Chart icon"/>
             Relatório geral
           </h2>
           <ul class="general-report__list">
@@ -897,7 +898,9 @@
               Insights
           </h2>
           <table class="insights-table">
-            <h3 class="insights-table__title">Produtos mais vendidos</h3>
+            <h3 class="insights-table__title">
+              Produtos mais vendidos
+            </h3>
             <thead class="insights-table__thead">
               <tr class="insights-table__trow">
                 <th class="insights-table__thead-column insights-table__thead-column--products">
@@ -1209,9 +1212,7 @@
                     />
                   </svg>
                 </li>
-                <li class="view-products__item view-products__item--active">
-                  1
-                </li>
+                <li class="view-products__item view-products__item--active">1</li>
                 <li class="view-products__item">2</li>
                 <li class="view-products__item">3</li>
                 <li class="view-products__item view-products__item--nav">
