@@ -16,10 +16,10 @@
           Vamos decolar para grandes dias de vendas.
         </span>
       </div>
-      <form action="" class="container-block__form">
-        <label for="email" class="container-block__label"> Seu E-mail </label>
+      <form action="/" target="_blank" method="post" class="container-block__form">
+        <label for="email" class="container-block__label container-block__label--email"> Seu E-mail </label>
         <input
-          class="container-block__input"
+          class="container-block__input container-block__input--email"
           type="email"
           name="email"
           id="email"
@@ -28,14 +28,16 @@
           autofocus
         />
 
-        <label for="password" class="container-block__label"> Sua Senha </label>
+        
+        <label for="password" class="container-block__label container-block__label--password"> Sua Senha </label>
         <input
-          class="container-block__input"
+          class="container-block__input container-block__input--password"
           type="password"
           name="password"
           id="password"
           placeholder="Digite sua senha"
           required
+          
         />
 
         <div class="container-block__form-info">
@@ -54,5 +56,8 @@
         <button type="submit" class="container-block__button">Entrar</button>
       </form>
     </main>
+
+
+    <script src="./../scripts/authenticate.js"></script>
   </body>
 </html>

@@ -846,6 +846,12 @@ a:hover {
   line-height: 16px;
   color: var(--neutral-low-default);
 }
+
+/* .tbody-item__image {
+  width: 40px;
+  height: 40px;
+} */
+
 .tbody-item__value {
   width: max-content;
   font-size: 12px;
