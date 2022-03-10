@@ -561,6 +561,10 @@ a:hover {
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
+.banner__button:hover {
+  opacity: 0.8;
+}
+
 /* banner  */
 .overview__block {
   display: flex;
@@ -630,6 +634,9 @@ a:hover {
   padding: 24px;
   background-color: var(--neutral-high-default);
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .general-report__title {
@@ -649,6 +656,51 @@ a:hover {
   align-items: center;
   gap: 0 24px;
   border-bottom: 1px solid var(--neutral-high-light);
+}
+
+.general-report__select {
+  position: relative;
+  width: 280px;
+  height: 40px;
+  margin-top: 16px;
+}
+
+.select-block {
+  appearance: none;
+  width: calc(280px + 24px + 8px);
+  height: 40px;
+  padding: 8px 56px 8px 16px;
+  background-color: var(--neutral-high-default);
+  border: 1px solid var(--neutral-low-light);
+  border-radius: 8px;
+}
+
+.select-block:focus,
+.select-block:hover {
+  outline: none;
+  border: 2px solid var(--primary-default);
+  padding-left: 15px;
+}
+
+.select-block option {
+  padding: 20px;
+}
+
+.select-block__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -10px;
+}
+
+.select-block:focus-visible ~ .select-block__icon {
+  top: 9px;
+  transform: rotate(180deg);
+  transition: all 0.4s ease-in;
+}
+
+.general-report__select {
+  display: none;
 }
 
 .general-report__item {
@@ -723,8 +775,109 @@ a:hover {
   color: var(--neutral-low-default);
 }
 
-.chart-temp {
-  width: min(100%, 1084px);
+.general-report__block--right {
+  width: 340px;
+  height: 429px;
+  background: var(--neutral-high-default);
+  border: 2px solid var(--primary-lightest);
+  border-radius: 8px;
+  padding: 24px;
+  flex-direction: column;
+}
+
+.general-report__resellers-title {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--neutral-low-dark);
+  gap: 0 12px;
+  margin-bottom: 24px;
+}
+
+.resellers-row {
+  display: flex;
+  align-items: center;
+  gap: 0 16px;
+  width: 100%;
+}
+
+.resellers__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.resellers__logo-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-lightest);
+  border-radius: 50%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--primary-default);
+}
+
+.resellers__container {
+  width: 100%;
+}
+
+.resellers__name {
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: var(--neutral-low-dark);
+}
+
+.resellers__info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.resellers__orders {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.005em;
+  color: var(--neutral-low-medium);
+}
+
+.resellers__percentage {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.005em;
+  color: var(--feedback-success-medium);
+  display: flex;
+  align-items: center;
+}
+
+.chart-sales,
+.chart-orders {
+  width: 100%;
+}
+
+.chart-sales,
+.chart-orders,
+.chart-resellers {
+  margin-top: 48px;
+}
+
+.chart-resellers {
+  width: 90%;
+  max-width: 680px;
 }
 /* General Report */
 
@@ -911,8 +1064,8 @@ a:hover {
 .view-products__select:focus-visible ~ .view-products__icon {
   top: 5px;
   transform: rotate(180deg);
-  background: transparent;
   stroke: var(--primary-default);
+  transition: all 0.4s ease-in;
 }
 
 .view-products__icon {

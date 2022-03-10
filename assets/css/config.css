@@ -13,6 +13,7 @@
   --primary-medium: #2e44a1;
   --primary-light: #cdd2eb;
   --primary-lightest: #f1f2f9;
-  --feedback-helper-default: #F03460;
-  --feedback-helper-medium: #EB0045;
+  --feedback-helper-default: #f03460;
+  --feedback-helper-medium: #eb0045;
+  --feedback-success-medium: #158f2e;
 }

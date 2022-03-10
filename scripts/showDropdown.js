@@ -29,6 +29,3 @@ navLink.forEach((item) => {
     }
   };
 });
-
-
-const overviewItem = document.querySelectorAll(".overview__item");
