@@ -181,3 +181,43 @@ body {
   opacity: 0.7;
   transition: opacity 0.3s ease-in;
 }
+
+@media screen and (max-width: 425px) {
+  .container-block {
+    width: 328px;
+    padding: 32px 16px 16px;
+  }
+
+  .container-block__header {
+    width: max(100%, 296px);
+  }
+
+  .container-block__title {
+    width: 100%;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .container-block__text {
+    width: 100%;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .container-block__form {
+    width: 100%;
+  }
+
+  .container-block__input,
+  .container-block__label {
+    width: 100%;
+  }
+
+  .container-block__button {
+    width: 100%;
+  }
+}
