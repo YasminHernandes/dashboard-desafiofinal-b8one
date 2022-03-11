@@ -1,3 +1,12 @@
+@media screen and (max-width: 1060px) {
+  .general-report__block {
+    flex-direction: column;
+  }
+  .general-report__block--right {
+    margin-left: 0;
+  }
+}
+
 @media screen and (max-width: 985px) {
   /* table */
   .insights-table__thead,
@@ -177,5 +186,14 @@
   .banner__title {
     font-size: 14px;
     line-height: 18px;
+  }
+
+  .general-report__select {
+    display: none;
+  }
+
+  .general-report__block--right {
+    width: 296px;
+    align-self: center;
   }
 }
