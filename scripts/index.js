@@ -8,6 +8,7 @@ const productIndex = document.querySelectorAll(".tbody-item__element");
 
 const BASE__URL = "https://test-final.b8one.academy/";
 
+// populate table
 async function populateTable(i) {
   const PRODUCT__URL = BASE__URL + "products/more-sold";
   const response = await fetch(PRODUCT__URL);
@@ -29,6 +30,7 @@ function getDataTable() {
   }
 }
 
+// populate list - general report
 const revenues = document.querySelector(".general-report__value--revenue");
 const totalSales = document.querySelector(
   ".general-report__value--total-sales"
@@ -58,6 +60,7 @@ function formatPrice(value) {
   return value;
 }
 
+// active links
 const linkActiveOverview = document.querySelectorAll(".overview__item");
 const linkActiveReport = document.querySelectorAll(".general-report__item");
 
@@ -105,6 +108,7 @@ async function clickLinkReport() {
 linkActiveOverview.onclick = clickLinkOverview();
 linkActiveReport.onclick = clickLinkReport();
 
+// general report
 const linkSalesActive = document.querySelector(".general-report__item-sales");
 const linkOrdersActive = document.querySelector(".general-report__item-orders");
 const linkResellersActive = document.querySelector(
@@ -166,6 +170,7 @@ function populateReport() {
   }
 }
 
+// ranking
 const resellers = document.querySelector(".general-report__resellers");
 const arrowPercentage = document.querySelector(".resellers__percentage");
 
@@ -233,6 +238,23 @@ async function populateResellersRanking() {
   }
 }
 
+//  user
+async function getUser() {
+  const titleOrg = document.querySelector(".header__title");
+  const imageUser = document.querySelector(".header-item__profile-image");
+  const nameUser = document.querySelector(".header-item__profile-name");
+  
+  const USER__URL = BASE__URL + "user";
+  const response = await fetch(USER__URL);
+
+  const responseJson = await response.json();
+  console.log(responseJson);
+
+  titleOrg.innerHTML = responseJson.organization;
+  imageUser.src = responseJson.photo;
+  nameUser.innerHTML = responseJson.username;
+}
+
 (function init() {
   getDataTable();
   populateListReport();
@@ -240,4 +262,5 @@ async function populateResellersRanking() {
   clickLinkReport();
   populateReport();
   populateResellersRanking();
+  getUser();
 })();
