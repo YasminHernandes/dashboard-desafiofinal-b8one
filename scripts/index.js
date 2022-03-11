@@ -4,6 +4,7 @@ const productName = document.querySelectorAll(".tbody-item__title");
 const productId = document.querySelectorAll(".tbody-item__value--id");
 const productDepart = document.querySelectorAll(".tbody-item__value--depart");
 const productPrice = document.querySelectorAll(".tbody-item__value--price");
+const productIndex = document.querySelectorAll(".tbody-item__element");
 
 const BASE__URL = "https://test-final.b8one.academy/";
 
@@ -14,6 +15,7 @@ async function populateTable(i) {
   const responseJson = await response.json();
   const responseProducts = responseJson.products;
 
+  productIndex[i].innerHTML = parseInt(i)+1
   productImage[i].src = responseProducts[i].image;
   productName[i].innerHTML = responseProducts[i].name;
   productId[i].innerHTML = responseProducts[i].orderId;

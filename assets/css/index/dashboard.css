@@ -613,6 +613,12 @@ a:hover {
   border: 2px solid var(--primary-default);
 }
 
+.overview__item--active
+  .overview__arrow-icon:not(.overview__item--active:hover)
+  path {
+  stroke: var(--neutral-high-default);
+}
+
 .overview__item--dropdown {
   gap: 0 4px;
 }
@@ -1037,10 +1043,10 @@ a:hover {
   color: var(--neutral-low-default);
 }
 
-/* .tbody-item__image {
-  width: 40px;
-  height: 40px;
-} */
+.tbody-item__image {
+  margin-right: 
+  16px;
+}
 
 .tbody-item__value {
   width: max-content;

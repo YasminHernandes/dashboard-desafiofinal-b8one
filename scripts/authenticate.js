@@ -19,21 +19,29 @@ const authenticate = async () => {
     },
     body: JSON.stringify({
       email: "academy@b8one.com",
-      password: "Academy20022",
+      password: "Academy2022",
     }),
   });
   const response = await AUTH__URL.json();
-  console.log(response.message);
+  console.log(response);
 
-  function validateForm() {
-    if (inputEmail.value !== "") {
-      if (response.message === "user_not_found") {
-        console.log("entrou");
-        inputEmail.classList.add("error");
-        inputEmail.insertAdjacentHTML("afterend", errorMessage);
-        inputEmail.style.marginBottom = "8px";
-      }
-    }
+  if (response) {
+    formButton.sumbit();
+  } else {
+    inputEmail.classList.add("error");
+    inputEmail.insertAdjacentHTML("afterend", errorMessage);
+    inputEmail.style.marginBottom = "8px";
   }
-  formButton.onsumbit = validateForm;
+
+  // function validateForm() {
+  //   if (inputEmail.value !== "") {
+  //     if (response.message === "user_not_found") {
+  //       console.log("entrou");
+  //       inputEmail.classList.add("error");
+  //       inputEmail.insertAdjacentHTML("afterend", errorMessage);
+  //       inputEmail.style.marginBottom = "8px";
+  //     }
+  //   }
+  // }
+  // formButton.onsumbit = validateForm;
 };
