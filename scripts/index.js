@@ -15,7 +15,7 @@ async function populateTable(i) {
   const responseJson = await response.json();
   const responseProducts = responseJson.products;
 
-  productIndex[i].innerHTML = parseInt(i)+1
+  productIndex[i].innerHTML = parseInt(i) + 1;
   productImage[i].src = responseProducts[i].image;
   productName[i].innerHTML = responseProducts[i].name;
   productId[i].innerHTML = responseProducts[i].orderId;
@@ -75,9 +75,9 @@ async function clickLinkOverview() {
 
   if (countLink.length > 1) {
     let currentCountLink = countLink.shift();
-    currentCountLink.classList.remove("overview__item__item--active");
+    currentCountLink.classList.remove("overview__item--active");
     currentCountLink = countLink.pop();
-    currentCountLink.classList.remove("overview__item__item--active");
+    currentCountLink.classList.remove("overview__item--active");
   }
 }
 
@@ -114,6 +114,8 @@ const reportBlock = document.querySelector(".general-report__block");
 const reportBlockRight = document.querySelector(
   ".general-report__block--right"
 );
+const reportBlockLeft = document.querySelector(".general-report__block--left");
+
 const swiperReport = document.querySelector(".general-report__swiper");
 const selectResellersReport = document.querySelector(".general-report__select");
 
@@ -140,6 +142,7 @@ function populateReport() {
     chartOrdersReport.style.display = "none";
     selectResellersReport.style.display = "none";
     chartResellersReport.style.display = "none";
+    reportBlockLeft.style.width = "100%";
     reportBlockRight.style.display = "none";
   }
   if (ordersActive) {
@@ -147,10 +150,12 @@ function populateReport() {
     chartSalesReport.style.display = "none";
     chartOrdersReport.style.display = "initial";
     selectResellersReport.style.display = "none";
+    reportBlockLeft.style.width = "100%";
     reportBlockRight.style.display = "none";
     chartResellersReport.style.display = "none";
   }
   if (resellersActive) {
+    reportBlockLeft.style.width = "680px";
     reportBlock.style.display = "flex";
     selectResellersReport.style.display = "block";
     swiperReport.style.display = "none";
@@ -215,7 +220,7 @@ async function populateResellersRanking() {
         <div class="resellers__info">
          <small class="resellers__orders">${
            responseResellers[i].ordersCount
-         }</small>
+         } pedidos</small>
           <span class="resellers__percentage ${percentageReselllers}">${percentage}
          ${arrowPercent}
           </span>
