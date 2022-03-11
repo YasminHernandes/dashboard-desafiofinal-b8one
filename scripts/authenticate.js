@@ -32,16 +32,4 @@ const authenticate = async () => {
     inputEmail.insertAdjacentHTML("afterend", errorMessage);
     inputEmail.style.marginBottom = "8px";
   }
-
-  // function validateForm() {
-  //   if (inputEmail.value !== "") {
-  //     if (response.message === "user_not_found") {
-  //       console.log("entrou");
-  //       inputEmail.classList.add("error");
-  //       inputEmail.insertAdjacentHTML("afterend", errorMessage);
-  //       inputEmail.style.marginBottom = "8px";
-  //     }
-  //   }
-  // }
-  // formButton.onsumbit = validateForm;
 };
